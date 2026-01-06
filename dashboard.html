@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard - Inventory</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="dashboard-container">
+
+    <!-- HEADER -->
+    <div class="dashboard-header">
+      <h1>Tvoj inventar lekova</h1>
+      <button id="logout" class="logout-btn">Odjavi se</button>
+    </div>
+
+    <!-- FILTER -->
+    <input
+      type="text"
+      id="filter"
+      class="filter-input"
+      placeholder="🔍 Pretraži lek po nazivu"
+    >
+
+    <!-- FORMA -->
+    <form id="inventory-form" class="inventory-form">
+      <input type="text" id="name" placeholder="Naziv leka" required>
+      <input type="number" id="quantity" placeholder="Količina" min="0" required>
+      <input type="date" id="expiry" required>
+      <textarea id="notes" placeholder="Napomena (opciono)"></textarea>
+      <button type="button" id="add-item">Dodaj lek</button>
+    </form>
+
+    <!-- TABELA -->
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Naziv leka</th>
+            <th>Količina</th>
+            <th>Rok trajanja</th>
+            <th>Napomena</th>
+            <th>Akcija</th>
+          </tr>
+        </thead>
+        <tbody id="inventory-table"></tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <script type="module" src="inventory.js"></script>
+</body>
+</html>

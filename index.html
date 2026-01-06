@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pharmacy Inventory - Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- NASLOV IZNAD FORME -->
+    <h1 class="auth-title">Prijava / Registracija</h1>
+    <p class="auth-subtitle">
+      Prijavite se ili napravite novi nalog
+    </p>
+
+    <!-- FORMA -->
+    <form id="auth-form">
+      <input type="email" id="email" placeholder="Email adresa" required>
+      <input type="password" id="password" placeholder="Lozinka" required>
+
+      <button type="button" id="signin">Prijavi se</button>
+      <button type="button" id="signup">Registruj se</button>
+    </form>
+
+    <div id="message"></div>
+  </div>
+
+  <script type="module" src="auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,274 @@
+/* ===== RESET & OSNOVA ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+}
+
+/* ===== CARD (LOGIN / DASHBOARD) ===== */
+.container {
+  background: #ffffff;
+  width: 100%;
+  max-width: 420px;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== NASLOVI ===== */
+h1 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #0d506b, #1d7457);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: inline-block;       /* okvir prati samo tekst */
+  transition: transform 0.2s, box-shadow 0.4s;
+
+  /* centriranje bez preklapanja */
+  text-align: center;
+  margin: 0 auto 20px;         /* centriranje i prostor dole za dugme */
+}
+
+h1:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  cursor: default;
+}
+
+
+
+
+
+/* ===== FORME ===== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input,
+textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #2c5364;
+}
+
+/* ===== DUGMAD ===== */
+button {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+#signup {
+  background: #2c5364;
+  color: #fff;
+}
+
+#signin {
+  background: #1abc9c;
+  color: #fff;
+}
+
+#logout {
+  background: #e74c3c;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+#add-item {
+  background: #2c5364;
+  color: #fff;
+}
+
+/* ===== PORUKE ===== */
+#message {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* ===== DASHBOARD CARD ===== */
+.dashboard {
+  max-width: 900px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 25px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  margin: 20px auto;
+}
+
+/* ===== FILTER ===== */
+#filter {
+  display: block;
+  margin: 0 auto 20px auto; /* centrirano */
+  padding: 8px 12px; /* manji input */
+  width: 250px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* ===== TABELA ===== */
+table {
+  width: 100%; /* veća tabela */
+  border-collapse: collapse;
+  margin-top: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+th, td {
+  padding: 14px; /* veći padding */
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
+}
+
+thead th {
+  background: #f4f6f8;
+  font-weight: 600;
+}
+
+tbody tr {
+  height: 50px; /* veći redovi */
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+tr:hover {
+  background: #f9f9f9;
+  transform: translateY(-1px);
+}
+
+/* ===== BOJE PO STANJU LEKA ===== */
+tr.normal {
+  background-color: #dff9fb; /* svetlozelena */
+}
+
+tr.expiring {
+  background-color: #ffe0e0; /* svetlocrvena */
+}
+
+/* ===== DUGMAD U TABELI ===== */
+.edit-btn,
+.delete-btn {
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  margin-right: 5px;
+  transition: 0.2s;
+}
+
+.edit-btn {
+  background: #2c5364;
+  color: #fff;
+}
+
+.edit-btn:hover {
+  background: #1f3f52;
+}
+
+.delete-btn {
+  background: #e74c3c;
+  color: #fff;
+}
+
+.delete-btn:hover {
+  background: #c0392b;
+}
+
+/* ===== POSLEDNJA IZMENA ===== */
+.edited-info td {
+  font-size: 12px;
+  color: #2c5364;
+  background: #f4f6f8;
+  text-align: right;
+  padding: 5px 10px;
+  position: relative;
+  border-radius: 5px;
+}
+
+.edited-info td::before {
+  content: '⬆';
+  margin-right: 5px;
+  color: #2c5364;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .container,
+  .dashboard {
+    padding: 20px;
+  }
+
+  table, input, textarea, button {
+    font-size: 13px;
+  }
+}
+
+/* ===== DASHBOARD HEADER LAYOUT ===== */
+.dashboard-header {
+  position: relative;
+  padding: 18px 20px 10px;
+  min-height: 56px; /* enough space for centered title and left button */
+}
+
+.dashboard-header h1 {
+  position: absolute;
+  left: 50%;
+  top: -20%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  /* keep visual style but remove inline-block spacing */
+  display: block;
+}
+
+.dashboard-header #logout {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 480px) {
+  .dashboard-header h1 {
+    font-size: 18px;
+    padding: 8px 12px;
+  }
+  .dashboard-header #logout {
+    left: 8px;
+  }
+}
