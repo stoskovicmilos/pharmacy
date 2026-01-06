@@ -1,0 +1,9 @@
+# Local Supabase config (should contain anon/service_role keys)
+supabase.config.js
+
+# OS / editors
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
