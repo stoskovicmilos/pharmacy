@@ -12,4 +12,4 @@
 
 ## Tech Stack
 - HTML, CSS, JavaScript
-- Supabase (Authentication & Database)
+- Supabase (Authentication & Database)PostgreSQL
